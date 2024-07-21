@@ -1,0 +1,32 @@
+
+
+    <%- include("./partials/header") %>
+    <main>
+    <form  method="post" class="flex">
+        <div class="flex randomdiv">
+            <input type="submit"  formaction= "/random" value=" Get Random Quote">
+            <div name="randomQuote" id="randomQuote">
+                <%= locals.content %>
+            </div>
+        </div>
+        
+       <div class="flex typediv">
+        <label for="quoteType">Choose a Type : </label>
+        <select name="quoteType" id="quoteType">
+            <option value="success">Success</option>
+            <option value="love">Love</option>
+            <option value="attitude">Attitude</option>
+            <option value="positive">Positive</option>
+            <option value="motivational">Motivational</option>
+        </select>
+        <input type="submit" value="Get Quote" formaction="/type">
+        <div  id="quoteTypeinfo">
+            <%= locals.quoteinfo %>
+        </div>
+       </div>
+      
+    </form>
+
+   <%- include("./partials/footer") %>
+</body>
+</html>
